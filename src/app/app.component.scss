@@ -1,0 +1,14 @@
+@import '../assets/scss/fonoks-theming.scss';
+
+
+div.test{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 300px;
+    @include themify($themes){
+        color: themed('primaryTextColor');
+        background-color: themed('primaryColor');
+    }
+}

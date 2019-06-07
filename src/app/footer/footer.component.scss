@@ -1,0 +1,370 @@
+@import '../../assets/scss/fonoks-theming.scss';
+
+.footer-wrapper{
+    background: url('../../assets/images/footer-bg.jpg');
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .footer-container{
+    height: 100%;
+  }
+  
+  .footer-header-time{
+    margin-top: 1.75em;
+    margin-bottom: 0em;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 100%;
+    @include themify($themes){
+        color:themed('primaryTextColor');
+    }
+  }
+  
+  .footer-service-fapor{
+    margin-top: -1.75em;
+    @include smartphone{
+        margin-top: -0.75em;
+    }
+    @include smallphone{
+        margin-top: -0.75em;
+    }
+    strong{
+        @include themify($themes){
+            color:themed('primaryColor');
+        }
+    }
+  }
+  
+  .footer-project-availability{
+    font-size: 1.25em;
+    font-weight: 200;
+    margin: 0px;
+    line-height: 100%;
+    strong{
+        @include themify($themes){
+            color:themed('primaryColor');
+        }
+    }
+  }
+  .footer-project-fapor{
+    font-size: 1.75em;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 100%;
+    @include smartphone{
+        font-size: 1.25em;
+    }
+    @include smallphone{
+        font-size: 1em;
+    }
+    
+  }
+  
+  .footer-project-fapor strong{
+    margin-left: -10px;
+    font-size: 4em;
+    font-weight: 600;
+  }
+  
+  .footer-project-fapor-v2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2em;
+    letter-spacing: 1px;
+  }
+  
+  .footer-line-animation-box{
+    width: 240px;
+    height: 80px;
+    @include themify($themes){
+        border:2px solid themed('primaryColor');
+        border-top: 0px;
+    }
+    margin-top: -48px;
+  }
+  .footer-line-animation-box::before{
+    display: inline-block;
+    margin: 0 0 15px 0px;
+    height: 2px;
+    content: " ";
+    text-shadow: none;
+    @include themify($themes){
+        background-color:themed('primaryColor');
+    }
+    width: 65px;
+  }
+  
+  .footer-line-animation-box::after{
+    display: inline-block;
+    margin: 0 0 15px 112px;
+    height: 2px;
+    content: " ";
+    text-shadow: none;
+    @include themify($themes){
+        background-color:themed('primaryColor');
+    }
+    width: 59px;
+  }
+  
+  .footer-contact-button{
+    margin-top: -21px;
+  }
+  
+  .footer-contact-button .red-button-class{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .footer-or{
+    font-weight: 100;
+    font-size: 42px;
+    margin-bottom: 0px;
+    line-height: 100%;
+  }
+  
+  .footer-fapor-discover{
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 0px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    @include themify($themes){
+        color:themed('primaryColor');
+    }
+
+    @include smartphone{
+        font-size: 1em;
+    }
+    @include smallphone{
+        font-size: 1em;
+    }
+  }
+  
+  .footer-social-icon-wrapper{
+    margin-top:20px;
+  }
+  
+  .footer-social-icon{
+    @include themify($themes){
+        color:themed('accentColor');
+    }
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .footer-social-icon-holder{
+    height: 34px;
+    width: 34px;
+    @include themify($themes){
+        background-color:themed('primaryTextColor');
+    }
+    padding: 5px;
+    padding-top: 6.5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
+  
+  .footer-social-icon-holder:hover{
+    @include themify($themes){
+        background-color:themed('primaryColor');
+    }
+  }
+  
+  .footer-social-icon-holder:hover .footer-social-icon{
+    @include themify($themes){
+        color:themed('primaryTextColor');
+    }
+  }
+  
+  .footer-social-menu-wrapper{
+    margin-top: 20px;
+  }
+  
+  .footer-menu-item{
+    font-size: 14px;
+    @include themify($themes){
+        color:themed('thirdTextColor');
+    }
+    @include smartphone{
+        font-size: 14px;
+    }
+    @include smallphone{
+        font-size: 12px;
+    }
+    transition: 0.3s;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .footer-menu-item:hover{
+    @include themify($themes){
+        color:themed('primaryColor');
+    }
+  }
+  
+  .footer-carocel-img-wrapper{
+    margin-top: 20px;
+  }
+  
+  .footer-carocel-img img{
+    width: 100%;
+    height: 300px;
+  }
+  
+  .footer-img-wrapper{
+    height: width/3;
+  }
+  .footer-img-container{
+    height: 100%;
+  }
+  
+  .footer-img{
+    width: 100%;
+    height: 100%;
+  }
+  .footer-bottom-wrapper{
+    height: 100%;
+  }
+  .footer-bottom-copyright{
+    height: 100%;
+    display: flex;
+  }
+  
+  .footer-bottom-container{
+    height: 35px;
+    padding-top: 5px;
+    @include themify($themes){
+        background-color:themed('accentColor');
+    }
+  }
+  
+  .footer-bottom-container-row{
+    height: 100%;
+  }
+  
+  .footer-copyright-text{
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0px;
+    @include themify($themes){
+        color:themed('thirdTextColor');
+    }
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    @include smartphone{
+        font-size: 10px;
+    }
+    @include smallphone{
+        font-size: 8px;
+    }
+  }
+  
+  .footer-bottom-link{
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0px;
+    @include themify($themes){
+        color:themed('thirdTextColor');
+    }
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    @include smartphone{
+        font-size: 10px;
+    }
+    @include smallphone{
+        font-size: 8px;
+    }
+  }
+  
+  .footer-carosel-container{
+    margin-top:20px;
+  }
+  
+  .footer-bottom{
+    align-self: flex-end;
+  }
+  .footer-top{
+    align-self: flex-end;
+  }
+  
+  
+  /*###########    carosell section    ############*/
+  
+
+
+  .carosell-container-wrapper{
+    width: 100vw;
+    height: 16.666666vw;
+    @include themify($themes){
+        background-color: themed('accentColor');
+    }
+    overflow: hidden;
+  }
+  
+  .carosell-box{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  #carosell-container{
+    @include themify($themes){
+        background-color: themed('accentColor');
+    }
+  }
+  
+  .carosell{
+    position: relative;
+    float: left;
+    width: 16.666666vw;
+    height:16.666666vw;
+    padding-bottom:15px;
+    transition:1s;
+    @include themify($themes){
+        background-color: themed('accentColor');
+    }
+    transition-timing-function: cubic-bezier(.79,.12,.4,1.03);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+  }
+  
+  .carosell-bubble{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  
+  .carosell-dot-wrapper{
+    margin-top: -2.25em;
+  }
+  .carosell-dot{
+    cursor: pointer;
+    height: 0.5em;
+    width: 0.5em;
+    opacity: 0.5;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .carosell-dot:hover{
+    background-color:#717171;
+  }
+  
+  .carosell-dot-active{
+    background-color:#717171;
+  }
+  

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row banner-section-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home-slider-container-wrapper container-fluid">
+              <div class="home-slider-box">
+                <div id="home-slider-container">
+                    <div class="home-slider" style="background-image:url('./assets/images/bg-about-me.jpg')">1</div>
+                    <div class="home-slider" style="background-image:url('./assets/images/DSC_5269.jpg')">2</div>
+                    <div class="home-slider" style="background-image:url('./assets/images/2.jpg')">3</div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row dot-wrapper">
+            <div class="container-fluid home-slider-bubble">
+                <div class="row justify-content-center">
+                    <span class="dot active align-self-center" (click)="slider.currentSlide(0)"></span>
+                    <span class="dot" (click)="slider.currentSlide(1)"></span>
+                    <span class="dot" (click)="slider.currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

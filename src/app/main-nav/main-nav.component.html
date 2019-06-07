@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container fonoks-theme-darkorange">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ |async) ? 'dialog' : 'navigation'"
+      [mode]="(mobileQuery.matches) ? 'over' : 'side'"
+      [opened]="false">
+      <!-- [opened]="!(isHandset$ | async)"> -->
+    <mat-toolbar>fonoks photobox</mat-toolbar>
+    <mat-list>
+      <div mat-list-item> <a mat-button routerLink="/home" routerLinkActive="router-link-active" class="nav-element" >home</a> </div>
+      
+      <div mat-list-item> <a mat-button routerLink="/photobox" routerLinkActive="url-active" class="nav-element">photobox</a> </div>
+      <div mat-list-item> <a mat-button routerLink="/services" routerLinkActive="url-active" class="nav-element">services</a> </div>
+      <div mat-list-item> <a mat-button routerLink="/pricingplan" routerLinkActive="url-active" class="nav-element">pricing plan</a> </div>
+      <div mat-list-item> <a mat-button routerLink="/aboutus" routerLinkActive="url-active"  class="nav-element">about us</a> </div>
+      <div mat-list-item> <a mat-button routerLink="/contactus" routerLinkActive="url-active" class="nav-element">contact us</a> </div>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="accent">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="mobileQuery.matches">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="nav-container">
+          <div class="container header" *ngIf="!mobileQuery.matches">
+            <div class="row justify-center header-content-wrapper">
+              <div class="col-3 content-center">
+                <div class="row header-logo-wrapper">
+                  <a [routerLink]="['/home']" routerLinkActive="router-link-active" class="fonok-logo" style="background-image: url('./assets/images/signature.png')"></a>
+                </div>
+              </div>
+              <div class="col-9 content-center">
+                <ul class="fonok-menubar row">
+                  <li class="col"><a routerLink="/home" routerLinkActive="router-link-active" >home</a></li>
+                  <li class="col"><a routerLink="/photobox" routerLinkActive="router-link-active" >photobox</a></li>
+                  <li class="col"><a routerLink="/services" routerLinkActive="router-link-active" >services</a></li>
+                  <li class="col"><a routerLink="/pricingplan" routerLinkActive="router-link-active">pricing plan</a></li>
+                  <li class="col"><a routerLink="/aboutus" routerLinkActive="router-link-active" >about us</a></li>
+                  <li class="col"><a routerLink="/contactus" routerLinkActive="router-link-active">contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    </mat-toolbar>
+    
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
