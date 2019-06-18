@@ -1,0 +1,90 @@
+
+
+
+/*####  FONTS   #####*/
+
+
+$ROBOTO: 'Roboto', sans-serif;
+$POIRETONE: 'Poiret One', cursive;
+$KAUSHAN: 'Kaushan Script', cursive;
+$themes: (
+  darkorange: (
+    primaryColor: #bf360c,
+    accentColor: #212121,
+    warnColor: #d50000,
+    primaryBackground: #010101,
+    accentBackground: #212121,
+    warnBackground: #000000,
+    primaryTextColor: #e5e5e5,
+    secondTextColor: #878787,
+    thirdTextColor: #9b9381,
+    fourthTextColor: #7d7769
+  ),
+);
+
+
+
+
+/*###############################     FONOKS THEMING    ####################################*/
+
+
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+
+    .fonoks-theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+
+/*###############################     MEDIA QUERY    ####################################*/
+
+$smart-phone-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$extra-large-desktop-width: 1360px;
+
+
+@mixin largeDesktop {
+  @media (min-width: #{$extra-large-desktop-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$extra-large-desktop-width - 1px}){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (min-width: #{$smart-phone-width}) and (max-width: #{$tablet-width - 1px}){
+    @content;
+  }
+}
+
+@mixin smallphone {
+  @media (max-width: #{$smart-phone-width - 1px}){
+    @content;
+  }
+}

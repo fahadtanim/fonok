@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$fonoks-primary: mat-palette($mat-deep-orange,900);
+$fonoks-accent: mat-palette($mat-grey,900);
+$fonoks-warn: mat-palette($mat-deep-orange,A700);
+
+$fonoks-material-theme: mat-dark-theme(
+  $fonoks-primary,
+  $fonoks-accent,
+  $fonoks-warn
+);
+//$background-color: map_get($mat-blue-grey, 50);
+/*
+$background-color: #010101;
+$background: map-get($fonoks-material-theme, background);
+$background: map_merge($background, (background-color: $background-color));
+$fonoks-material-theme: map_merge($fonoks-material-theme, (background-color: $background));*/
+@include angular-material-theme($fonoks-material-theme);
