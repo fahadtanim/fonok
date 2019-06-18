@@ -8,7 +8,7 @@ import { ModuleWithProviders } from "@angular/core";
 import { NgModule } from "@angular/core";
 import { OnDestroy } from "@angular/core";
 import { OnInit } from "@angular/core";
-import { Subscription } from "rxjs/Subscription";
+import { Subscription } from 'rxjs';
 
 // ----------------------------------------------------------------------------------- //
 // ----------------------------------------------------------------------------------- //
@@ -30,10 +30,10 @@ export abstract class WindowScroller {
 // I provide an implementation for scrolling a given Element Reference into view. By
 // default, it uses the native .scrollIntoView() method; but, it can be overridden to
 // use something like a jQuery plug-in, or other custom implementation.
-class NativeWindowScroller implements WindowScroller {
+export class NativeWindowScroller implements WindowScroller {
 
     private behavior: "auto" | "smooth";
-    private timer: number;
+    private timer: any;
 
     // I initialize the window scroller implementation.
     public constructor( @Inject( WINDOW_SCROLLER_OPTIONS ) options: WindowScrollerOptions ) {

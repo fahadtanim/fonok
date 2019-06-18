@@ -70,7 +70,7 @@ export class PhotoboxCategoryComponent implements OnInit,OnDestroy {
     this.slider.animate();
   }
   openPhoto(img ){
-    const dialogRef = this.dialog.open(ViewPhotoComponent,{data: img,width: '80vw', height: 'auto'});
+    const dialogRef = this.dialog.open(ViewPhotoComponent,{data: img,width: 'auto', height: 'auto'});
   }
 
 

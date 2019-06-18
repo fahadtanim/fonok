@@ -43,7 +43,11 @@
     min-width: 300px;
     max-width: 10vh;
   }
-
+  .url-active{
+    @include themify($themes){
+      color: themed('primaryColor');
+    }
+  }
   .example-is-mobile .example-toolbar {
     position: fixed;
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */

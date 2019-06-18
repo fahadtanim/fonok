@@ -25,12 +25,12 @@
     <mat-sidenav #snav [opened] = 'false' [mode]="mobileQuery.matches ? 'over' : 'side'"
                  >
       <mat-list>
-        <div mat-list-item> <a mat-button routerLink="/home" routerLinkActive="router-link-active" class="nav-element" >home</a> </div>
-        <div mat-list-item> <a mat-button routerLink="/photobox" routerLinkActive="url-active" class="nav-element">photobox</a> </div>
-        <div mat-list-item> <a mat-button routerLink="/services" routerLinkActive="url-active" class="nav-element">services</a> </div>
-        <div mat-list-item> <a mat-button routerLink="/pricingplan" routerLinkActive="url-active" class="nav-element">pricing plan</a> </div>
-        <div mat-list-item> <a mat-button routerLink="/aboutus" routerLinkActive="url-active"  class="nav-element">about us</a> </div>
-        <div mat-list-item> <a mat-button routerLink="/contactus" routerLinkActive="url-active" class="nav-element">contact us</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/home" routerLinkActive="url-active" class="nav-element" (click)="toggleMenu(snav)">home</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/photobox" routerLinkActive="url-active" class="nav-element" (click)="toggleMenu(snav)">photobox</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/services" routerLinkActive="url-active" class="nav-element" (click)="toggleMenu(snav)">services</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/pricingplan" routerLinkActive="url-active" class="nav-element" (click)="toggleMenu(snav)">pricing plan</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/aboutus" routerLinkActive="url-active"  class="nav-element" (click)="toggleMenu(snav)">about us</a> </div>
+        <div mat-list-item> <a mat-button routerLink="/contactus" routerLinkActive="url-active" class="nav-element" (click)="toggleMenu(snav)">contact us</a> </div>
       </mat-list>
     </mat-sidenav>
 

@@ -107,7 +107,7 @@ export class SliderService {
     width = 0;
     for (i = slideLen - 1; i >= this.slideIndex; i--) {
         slide = <HTMLElement>slides[i];
-        width += slide.clientWidth;
+        width += (slide.clientWidth + slide.clientWidth);
     }
     document.getElementById(this.sliderContainerClassName).style.width = width + 'px';
   }

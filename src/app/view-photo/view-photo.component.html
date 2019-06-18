@@ -1,9 +1,13 @@
 
-<h2 mat-dialog-title class="fonoks-theme-darkorange">Photo Gallery of <strong class="primary-text">Fonok's Photobox</strong></h2>
-<mat-dialog-content class="mat-typography fonoks-theme-darkorange" id = 'img-container'>
+<!-- <h2 mat-dialog-title class="fonoks-theme-darkorange">Photo Gallery of <strong class="primary-text">Fonok's Photobox</strong></h2> -->
+<div class="container-fluid" id = 'img-container'>
     <img id = 'img-content' src='./assets/images/portfolio/{{this.data.category}}/{{this.data.subcategory}}/JPEG/{{this.data.image}}'>
-</mat-dialog-content>
+</div>
+<!-- <div class="container-fluid">
+    <img id = 'img-content' src='./assets/images/portfolio/{{this.data.category}}/{{this.data.subcategory}}/JPEG/{{this.data.image}}'>
+</div> -->
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Ok</button>
 </mat-dialog-actions>
+
