@@ -16,7 +16,7 @@
               style="background-image: url('../../../assets/images/bg-about-me.jpg')">
               <div  class="home-service-box-container">
                 <div  class="row home-service-logo-wrapper justify-center">
-                  <img src="./assets//images/camera-focus.png"></div>
+                  <img src="./assets/images/camera-focus.png"></div>
                 <div  class="row home-service-title-wrapper justify-center">
                   <h6 >Product Photography</h6>
                 </div>
@@ -24,7 +24,7 @@
                   <p >I have a master's degree in civil engineering from the University of Southampton</p>
                 </div>
                 <div  class="row home-service-button justify-center"><a  class="button-class"
-                    href="#">See More</a></div>
+                    routerLink = '/services' fragment = 'productphotography' routerLinkActive="router-link-active" >See More</a></div>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@
               style="background-image: url('../../../assets/images/price-list2.jpg')">
               <div  class="home-service-box-container">
                 <div  class="row home-service-logo-wrapper justify-center"><img
-                    src="./assets//images/camera-focus.png"></div>
+                    src="./assets/images/camera-focus.png"></div>
                 <div  class="row home-service-title-wrapper justify-center">
                   <h6 >Fashion Photography</h6>
                 </div>
@@ -41,7 +41,7 @@
                   <p >I have a master's degree in civil engineering from the University of Southampton</p>
                 </div>
                 <div  class="row home-service-button justify-center"><a  class="button-class"
-                    href="#">See More</a></div>
+                    [routerLink]="['/services']" routerLinkActive="router-link-active" fragment='fashionphotography'>See More</a></div>
               </div>
             </div>
           </div>
@@ -50,15 +50,15 @@
               style="background-image: url('../../../assets/images/price-list3.jpg')">
               <div  class="home-service-box-container">
                 <div  class="row home-service-logo-wrapper justify-center"><img
-                    src="./assets//images/camera-focus.png"></div>
+                    src="./assets/images/camera-focus.png"></div>
                 <div  class="row home-service-title-wrapper justify-center">
-                  <h6 >Comercial Photography</h6>
+                  <h6 >Event Photography</h6>
                 </div>
                 <div  class="row home-service-details-wrapper justify-center">
                   <p >I have a master's degree in civil engineering from the University of Southampton</p>
                 </div>
                 <div  class="row home-service-button justify-center"><a  class="button-class"
-                    href="#">See More</a></div>
+                    [routerLink]="['/services']" routerLinkActive="router-link-active" fragment='eventphotography'>See More</a></div>
               </div>
             </div>
           </div>

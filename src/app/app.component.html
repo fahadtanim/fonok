@@ -9,3 +9,7 @@
 <app-fonok-nav>
   <router-outlet></router-outlet>
 </app-fonok-nav>
+<div class='fonoks-theme-darkorange'>
+    <button mat-fab *ngIf="this.scrolled" class="scroll-top-button" (click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>
+</div>
+

@@ -16,14 +16,12 @@ export class ServicesComponent implements OnInit {
     let x = <HTMLElement>document.getElementsByClassName('photobox-section-wrapper')[0];
     var styleElem = document.head.appendChild(document.createElement("style"));
     styleElem.innerHTML = ".gridline:before {height: "+h+"px;}"+".gridline:after {height: "+h+"px;}";
-    console.log(h);
   }
   ngOnInit() {
     let h = document.getElementsByClassName('photobox-section-wrapper')[0].clientHeight;
     let x = <HTMLElement>document.getElementsByClassName('photobox-section-wrapper')[0];
     var styleElem = document.head.appendChild(document.createElement("style"));
     styleElem.innerHTML = ".gridline:before {height: "+h+"px;}"+".gridline:after {height: "+h+"px;}";
-    console.log(h);
   }
 
 }

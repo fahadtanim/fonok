@@ -6,14 +6,16 @@ import { MatDialog } from '@angular/material';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
+  host: {
+    '(window:resize)': 'onResize($event)'
+  }
 })
 export class FooterComponent implements OnInit, OnDestroy {
   public carosell: CarosellService;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.carosell = new CarosellService('carosell', 'carosell-container', 'carosell-dot', 'carosell-dot-active', 3);
-    this.carosell.animate();
+
   }
   openDialog() {
     const dialogRef = this.dialog.open(PrivacyPolicyComponent);
@@ -22,7 +24,16 @@ export class FooterComponent implements OnInit, OnDestroy {
       console.log(`Dialog result: ${result}`);
     });
   }
+  onResize($event){
+    this.carosell.stopAnimate();
+    this.carosell = new CarosellService('carosell', 'carosell-container', 'carosell-dot', 'carosell-dot-active', 3);
+    this.carosell.animate();
+  }
 
+  ngAfterViewInit(){
+    this.carosell = new CarosellService('carosell', 'carosell-container', 'carosell-dot', 'carosell-dot-active', 3);
+    this.carosell.animate();
+  }
   ngOnDestroy() {
     this.carosell.stopAnimate();
   }

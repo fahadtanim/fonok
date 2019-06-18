@@ -12,3 +12,10 @@ div.test{
         background-color: themed('primaryColor');
     }
 }
+
+.scroll-top-button{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 50;
+}

@@ -13,8 +13,8 @@
         z-index: 1;
       }
     }
-    
-    
+
+
   }
 }
 
@@ -34,6 +34,33 @@
   color:white;
   text-decoration: none;
   font-family: 'Poiret One', cursive;
+  .mat-button-wrapper{
+    @include themify($themes){
+      font-family: 'Poiret One', cursive !important;
+    }
+
+  }
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  transition: 0.3s;
+  &:hover{
+    @include themify($themes){
+      color: themed('primaryColor');
+    }
+  }
+}
+
+.nav-element[_ngcontent-wtp-c1]{
+  color:white;
+  text-decoration: none;
+  font-family: 'Poiret One', cursive !important;
+  .mat-button-wrapper{
+    @include themify($themes){
+      font-family: 'Poiret One', cursive !important;
+    }
+
+  }
   font-size: 1em;
   text-align: left;
   width: 100%;

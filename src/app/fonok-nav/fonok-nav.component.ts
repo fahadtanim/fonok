@@ -1,5 +1,5 @@
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-fonok-nav',
@@ -7,12 +7,13 @@ import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
   styleUrls: ['./fonok-nav.component.scss'],
   host: {
     '(window:resize)': 'onResize($event)'
-  }
+  },
 })
 export class FonokNavComponent implements OnDestroy {
 
   mobileQuery: MediaQueryList;
-  
+  public scrolled: boolean;
+  public elem:any;
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
   fillerContent = Array.from({length: 50}, () =>
@@ -28,7 +29,10 @@ export class FonokNavComponent implements OnDestroy {
     this.mobileQuery = this.media.matchMedia('(max-width: 992px)');
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.scrolled = false;
+
   }
+
 
   onResize($event){
     this.mobileQuery = this.media.matchMedia('(max-width: 992px)');
@@ -43,4 +47,18 @@ export class FonokNavComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+    onScroll($event): void {
+      this.elem = $event.target;
+      if (this.elem.scrollTop > 300) {
+        this.scrolled = true;
+      } else {
+        this.scrolled = false;
+      }
+
+    }
+
+    scrollToTop(){
+      this.scrolled = false;
+      this.elem.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }

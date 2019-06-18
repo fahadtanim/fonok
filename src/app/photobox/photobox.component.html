@@ -1,0 +1,68 @@
+<div class="example-container fonok-theme-darkorange" [class.example-is-mobile]="mobileQuery.matches">
+  <!-- <mat-toolbar color="primary" class="example-toolbar">
+
+    <h1 class="example-app-name">Photobox Gallery</h1>
+  </mat-toolbar> -->
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? -56 : -56">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+    [style.marginTop.px]="mobileQuery.matches ? 0 : 56"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <mat-expansion-panel mat-list-item id="test">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Commercial Photography
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a mat-list-item [routerLink]="['/photobox/photo/commercial/view']" routerLinkActive="router-link-active">
+            View Commercial</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel mat-list-item id="test">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Portfolio Photography
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a mat-list-item [routerLink]="['/photobox/photo/product/view']" routerLinkActive="router-link-active"> View
+            Portfolio</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel mat-list-item id="test">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Product Photography
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a mat-list-item [routerLink]="['/photobox/photo/product/bodycare']" routerLinkActive="router-link-active">
+            Body Care</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/watch']" routerLinkActive="router-link-active">
+            Watch</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/sunglass']" routerLinkActive="router-link-active">
+            Sunglass</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/food']" routerLinkActive="router-link-active">
+            Food</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/shoe']" routerLinkActive="router-link-active">
+            Shoe</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/perfume']" routerLinkActive="router-link-active">
+            perfume</a>
+          <a mat-list-item [routerLink]="['/photobox/photo/product/bottle']" routerLinkActive="router-link-active">
+            Bottle</a>
+        </mat-expansion-panel>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content (scroll)='onScroll($event)'>
+        <button mat-fab color='primary' (click)="snav.toggle()" id = 'photobox-category-menu-button'>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-fab *ngIf="this.scrolled" class="scroll-top-button" (click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>

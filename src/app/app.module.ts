@@ -23,6 +23,11 @@ import { ServicesComponent } from './services/services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PhotoboxComponent } from './photobox/photobox.component';
+import { PhotoboxCategoryComponent } from './photobox-category/photobox-category.component';
+import { ViewPhotoComponent } from './view-photo/view-photo.component';
+import { PhotoboxFooterComponent } from './photobox-footer/photobox-footer.component';
+import { FragmentPolyfillModule } from "./fragment-polyfill-module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,10 +44,15 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ServicesComponent,
     AboutUsComponent,
     PricingPlanComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PhotoboxComponent,
+    PhotoboxCategoryComponent,
+    ViewPhotoComponent,
+    PhotoboxFooterComponent
   ],
   entryComponents: [
     PrivacyPolicyComponent,
+    ViewPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ParticlesModule
+    ParticlesModule,
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    })
   ],
   providers: [
   ],

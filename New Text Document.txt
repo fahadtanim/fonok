@@ -1,0 +1,65 @@
+<div class="photo-square photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+        <div class="photo-tall photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+        <div class="photo-wide photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+        <div class="photo-fat photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+        <div class="photo-medium photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+        <div class="photo-medium photo-grid-box">
+          <div
+            class="photo-container"
+            style="
+                background-image: url('./assets/images/bg-about-me.jpg');"
+          ></div>
+          <!-- <div class="photo-container-overlay">
+                  <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>

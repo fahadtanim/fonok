@@ -25,7 +25,7 @@
     <mat-sidenav #snav [opened] = 'false' [mode]="mobileQuery.matches ? 'over' : 'side'"
                  >
       <mat-list>
-        <div mat-list-item> <a mat-button routerLink="/home" routerLinkActive="router-link-active" class="nav-element" >home</a> </div>   
+        <div mat-list-item> <a mat-button routerLink="/home" routerLinkActive="router-link-active" class="nav-element" >home</a> </div>
         <div mat-list-item> <a mat-button routerLink="/photobox" routerLinkActive="url-active" class="nav-element">photobox</a> </div>
         <div mat-list-item> <a mat-button routerLink="/services" routerLinkActive="url-active" class="nav-element">services</a> </div>
         <div mat-list-item> <a mat-button routerLink="/pricingplan" routerLinkActive="url-active" class="nav-element">pricing plan</a> </div>
@@ -34,14 +34,11 @@
       </mat-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content (scroll)='onScroll($event)'>
+        <button mat-fab *ngIf="this.scrolled" class="scroll-top-button" (click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>
       <ng-content></ng-content>
-      <app-footer></app-footer>
+      <!-- <app-footer></app-footer> -->
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-
-<!-- Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->

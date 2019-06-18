@@ -1,0 +1,22 @@
+// .pic-container{
+//     position: absolute;
+//     top:0px;
+//     left: 0px;
+//     max-height: 100%;
+//     max-width: 100%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }
+@import '../../assets/scss/fonoks-theming.scss';
+
+.primary-text{
+    @include themify($themes){
+        color: themed('primaryColor');
+    }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}

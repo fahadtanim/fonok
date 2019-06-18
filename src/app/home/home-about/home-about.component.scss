@@ -3,6 +3,9 @@
 
 .home-about-container{
     min-height: 100vh;
+    height: auto;
+    padding-top: 35px;
+    padding-bottom: 60px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -11,11 +14,11 @@
         padding-right: 30px;
     }
   }
-  
+
   .home-about-parts-container{
-    min-height: 100vh;
+    // min-height: 100%;
   }
-  
+
   .home-about-greetings{
     font-size: 12px;
     font-weight: bold;
@@ -24,13 +27,13 @@
         color: themed('primaryColor');
     }
   }
-  
+
   .home-about-name{
     @include themify($themes){
         color: themed('primaryTextColor');
     }
   }
-  
+
   .home-about-name-dummy{
     font-size: 16px;
     font-weight: 400;
@@ -39,8 +42,8 @@
     letter-spacing: 2px;
     margin-bottom: 0px;
   }
-  
-  
+
+
   /*Home Name Section*/
   .home-about-name-main{
     font-family: 'Staatliches', cursive;
@@ -51,7 +54,7 @@
         color: themed('primaryTextColor');
     }
   }
-  
+
   .home-about-details{
     @include themify($themes){
         color: themed('fourthTextColor');
@@ -59,7 +62,7 @@
     font-size: 14px;
     line-height: 24px;
   }
-  
+
   .home-about-designation{
     @include themify($themes){
         color: themed('thirdTextColor');
@@ -69,15 +72,15 @@
     /* font-family: 'Oswald',sans-serif; */
     letter-spacing: 2px;
   }
-  
-  
+
+
   /*Home Icons Section*/
   .home-about-icon{
     height: 38px;
     width: 38px;
     margin-right: 25px;
   }
-  
+
   .home-about-icon-counter{
     font-size: 48px;
     font-weight: 100;
@@ -86,7 +89,7 @@
         color: themed('primaryColor');
     }
   }
-  
+
   .home-about-icon-details {
     font-size: 12px;
     line-height: 15px;
@@ -94,12 +97,12 @@
         color: themed('fourthTextColor');
     }
   }
-  
+
   /*Home Signature Section*/
   .home-about-signature {
     margin-top: 50px;
   }
-  
+
   p.home-about-signature-title {
     @include themify($themes){
         color: themed('fourthTextColor');
@@ -109,13 +112,12 @@
     line-height: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    
+
     padding-bottom: 6px;
     padding-right: 20px;
   }
-  
+
   img.home-about-signature-image {
     margin-left: 25px;
     height: 90px;
   }
-  

@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="container-fluid photobox-banner">
+        <div class="row">
+          <div class="slider-container-wrapper container-fluid">
+            <div class="slider-box">
+              <div id="slider-container">
+                <div
+                  class="slider"
+                  [ngStyle]="{'background-image': 'url(./assets/images/portfolio/'+sliderImage.category+'/'+sliderImage.subcategory+'/JPEG/'+sliderImage.image+')'}"
+                  *ngFor="let sliderImage of this.SliderImages"
+                >
+                  1
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row dot-wrapper">
+          <div class="container-fluid slider-bubble">
+            <div class="row justify-content-center">
+                <span
+                *ngFor='let loop3 of this.counter(this.SliderImages.length) ;let i= index'
+                [class.active] = 'i==1'
+                class="dot align-self-center"
+                (click)="slider.currentSlide(i-1)"
+              ></span>
+              <!-- <span
+                class="dot active align-self-center"
+                (click)="slider.currentSlide(0)"
+              ></span>
+              <span class="dot" (click)="slider.currentSlide(1)"></span>
+              <span class="dot" (click)="slider.currentSlide(2)"></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid photobox-container">
+    <div class="row">
+      <div class="photo-grid-container">
+        <div class="photo-{{image.size}} photo-grid-box" *ngFor="let image of this.Images" (click)="openPhoto(image)" >
+          <div
+
+            class="photo-container"
+            [ngStyle]="{'background-image': 'url(./assets/images/portfolio/'+image.category+'/'+image.subcategory+'/JPEG/'+image.image+')'}"
+          >
+          </div>
+          <!-- <div class="photo-container-overlay">
+                    <i class="far fa-eye photo-view-icon"></i>
+                </div> -->
+        </div>
+
+
+      </div>
+    </div>
+  </div>
