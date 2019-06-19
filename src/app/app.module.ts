@@ -28,6 +28,7 @@ import { PhotoboxCategoryComponent } from './photobox-category/photobox-category
 import { ViewPhotoComponent } from './view-photo/view-photo.component';
 import { PhotoboxFooterComponent } from './photobox-footer/photobox-footer.component';
 import { FragmentPolyfillModule } from "./fragment-polyfill-module";
+import { CategoryNavComponent } from './category-nav/category-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { FragmentPolyfillModule } from "./fragment-polyfill-module";
     PhotoboxComponent,
     PhotoboxCategoryComponent,
     ViewPhotoComponent,
-    PhotoboxFooterComponent
+    PhotoboxFooterComponent,
+    CategoryNavComponent
   ],
   entryComponents: [
     PrivacyPolicyComponent,

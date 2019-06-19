@@ -11,14 +11,14 @@ export class AppComponent {
   public scrolled = false;
   private eventSubscription: any;
   onscroll($event){
-    if(window.scrollY>300){
+    if(window.scrollY>100){
       this.scrolled = true;
     }
     else{
       this.scrolled = false;
     }
 
-    console.log('scrolled : ' + this.scrolled);
+    // console.log('scrolled : ' + this.scrolled);
   }
 
   scrollToTop(){

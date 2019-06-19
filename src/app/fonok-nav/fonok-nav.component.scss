@@ -115,5 +115,7 @@
 .mat-drawer{
   @include themify($themes){
     background-color: themed('accentColor');
+    position: fixed;
+    top:56px;
   }
 }

@@ -38,8 +38,15 @@
     </div>
   </div>
   <div class="container-fluid photobox-container">
-    <div class="row">
-      <div class="photo-grid-container">
+      <div class="row mosaic-container">
+        <div class='mosaic-{{image.size}} mosaic-pic-box' *ngFor="let image of this.Images" (click)="openPhoto(image)">
+            <div
+            class="photo-container"
+            [ngStyle]="{'background-image': 'url(./assets/images/portfolio/'+image.category+'/'+image.subcategory+'/JPEG/'+image.image+')'}"
+          >
+        </div>
+      </div>
+      <!-- <div class="photo-grid-container">
         <div class="photo-{{image.size}} photo-grid-box" *ngFor="let image of this.Images" (click)="openPhoto(image)" >
           <div
 
@@ -47,12 +54,8 @@
             [ngStyle]="{'background-image': 'url(./assets/images/portfolio/'+image.category+'/'+image.subcategory+'/JPEG/'+image.image+')'}"
           >
           </div>
-          <!-- <div class="photo-container-overlay">
-                    <i class="far fa-eye photo-view-icon"></i>
-                </div> -->
         </div>
 
 
-      </div>
-    </div>
+      </div> -->
   </div>

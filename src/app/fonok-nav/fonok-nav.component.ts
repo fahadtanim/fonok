@@ -38,18 +38,18 @@ export class FonokNavComponent implements OnDestroy {
     this.mobileQuery = this.media.matchMedia('(max-width: 992px)');
     this._mobileQueryListener = () => this.changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    console.log(this.mobileQuery);
+    // console.log(this.mobileQuery);
   }
   toggleMenu(nav){
     nav.toggle();
-    console.log(nav);
+    // console.log(nav);
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
     onScroll($event): void {
       this.elem = $event.target;
-      if (this.elem.scrollTop > 300) {
+      if (this.elem.scrollTop > 100) {
         this.scrolled = true;
       } else {
         this.scrolled = false;
@@ -60,5 +60,15 @@ export class FonokNavComponent implements OnDestroy {
     scrollToTop(){
       this.scrolled = false;
       this.elem.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    windowScrolleToTop(){
+      // window.scrollTo(56,0);
+      if(this.elem){
+        this.scrollToTop();
+      }
+      else{
+        window.scrollTo(112,0);
+      }
     }
 }

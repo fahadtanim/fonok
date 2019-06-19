@@ -24,6 +24,7 @@ export class PhotoboxCategoryComponent implements OnInit,OnDestroy {
   public category;
   public subcategory;
   public counter = Array;
+  public imageCounter: number;
   constructor(public dialog: MatDialog, private _route: ActivatedRoute, private router: Router) {
     this.category = '';
     this.subcategory = '';
@@ -45,12 +46,13 @@ export class PhotoboxCategoryComponent implements OnInit,OnDestroy {
         if (this.category && this.subcategory) {
           this.Images = this.imageServices.getImages(this.category, this.subcategory);
           this.SliderImages = this.sliderImageService.getImages(this.category, this.subcategory);
+          this.imageCounter = this.Images.length/7;
         } else{
           this.category = 'product';
           this.subcategory = 'random';
           this.SliderImages = this.sliderImageService.getImages(this.category, this.subcategory);
           this.Images = this.imageServices.getImages(this.category, this.subcategory);
-
+          this.imageCounter = this.Images.length/7;
         }
 
       }
